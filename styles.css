@@ -2,7 +2,13 @@
 
 body {
   margin: 0;
+  background: rgba(238, 238, 238, 0.582);
 }
+
+section {
+  text-align: center;
+}
+
 h1 {
   margin: 0;
 }
@@ -36,6 +42,42 @@ a {
 a:hover {
   color: rgba(207, 2, 2, 0.829);
 }
+
+.section-title {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+.section-title a {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.section-title #close {
+  display: none;
+}
+
+.section-title #close1 {
+  display: none;
+}
+
+#close.show {
+  display: block;
+}
+
+#open.hide{
+  display: none;
+}
+
+#close1.show {
+  display: block;
+}
+
+#open1.hide{
+  display: none;
+}
+
 
 /* header */
 
@@ -88,10 +130,34 @@ header li + li {
 
 /* profile */
 
-.profile {
-  text-align: center;
+.profile p {
+  font-size: 12px;
 }
 
-.profile p {
+.profile img {
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.profile h3 {
   font-size: 14px;
+}
+
+.profile .container {
+  display: none;
+}
+
+
+#contents.show {
+  display: block;
+}
+
+/* career */
+
+.career .container {
+  display: none;
+}
+
+#contents1.show {
+  display: block;
 }
