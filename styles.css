@@ -1,0 +1,282 @@
+/* common */
+html { scroll-behavior: smooth;}
+
+body {
+  margin: 0;
+  background: rgba(238, 238, 238, 0.582);
+}
+
+section {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 2.5vmin;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.container {
+  margin: 0 10px;
+}
+
+#contents1, #contents2, #contents3, #contents4 {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  transition: all .5s;
+}
+
+a:hover {
+  color: rgba(235, 35, 0, 0.89);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.section-title a {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  background: #eee;
+  padding: 0;
+  opacity: .7;
+  position: fixed;
+  z-index: 1;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header li + li {
+  margin-left: 8px;
+}
+
+/* hero */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: .9;
+}
+
+.hero h2 {
+  font-size: 8vmin;
+  margin: 0;
+  color: #eee;
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  background: -webkit-linear-gradient( 60deg,#ff0000, #fd6500,#ffef3d, #fae6e6);
+  background-size:400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnime 7s infinite;
+}
+
+@keyframes textAnime{
+  0%{background-position:0% 0%}
+  25%{background-position: 50% 50%}
+  50%{background-position:100% 100%}
+  75%{background-position:50% 50%}
+  100%{background-position:0% 0%}
+}
+
+.hero h2 span {
+  font-size: 6vmin;
+}
+
+/* profile */
+
+.profile img {
+  width: 26vmin;
+  height: 26vmin;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.profile h3 {
+  font-size: 4vmin;
+}
+
+/* career */
+.career .container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.career .container p {
+  text-align: left;
+
+}
+.career .container img {
+  width: 100%;
+  object-fit: cover;
+  opacity: .6;
+}
+
+
+/* future */
+.future .container {
+  position: relative;
+}
+
+.future img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  opacity: .7;
+}
+
+
+.future .message {
+  width: 80%;
+  margin: 0;
+  position: absolute;
+  top: 50% ;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.future p {
+  font-weight: bold;
+  color: #000;
+  background: rgba(255, 255, 255, 0.432);
+  border-bottom: 1px solid #000;
+  line-height: 30px;
+}
+
+/* works */
+
+.works img {
+  border: 1px solid rgba(0, 0, 0, 0.63);
+  border-radius: 8px;
+  width: 80%;
+  height: 30%;
+  object-fit: cover;
+  max-width: 400px;
+}
+
+.works p {
+  font-weight: bold;
+}
+
+.works a:hover {
+  opacity: .6;
+}
+
+/* footer */
+footer {
+  background: rgba(128, 128, 128, 0.623);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+footer p {
+  font-size: 4px;
+}
+
+/* 600px以上のスタイル  */
+@media screen and (min-width:600px) {
+  /* common */
+  h2 {
+    font-size: 36px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  /* header */
+  header li + li {
+    margin-left: 20px;
+  }
+
+  /* hero */
+  .hero img {
+    margin-bottom: 50px;
+  }
+
+  /* career */
+  .career .container {
+    width: 90%;
+    display: inline-block;
+  }
+
+  .career .container .myHistory {
+    display: inline-block;
+  }
+
+  .career .container img {
+    margin-left: 60px;
+    width: 46vmin;
+    height: 46vmin;
+  }
+
+  /* future */
+  .future img {
+    height: 60vw;
+    max-height: 500px;
+  }
+
+  .future .container {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  /* footer */
+  footer {
+    margin-top: 60px;
+  }
+}
